@@ -11,7 +11,7 @@ module TestGuru
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
-    config.time_zone = 'Asia/Almaty'
+    config.time_zone = 'Almaty'
 
     config.i18n.default_locale = :ru
 
