@@ -32,7 +32,7 @@ tests = Test.create!([
     { level: 1, title: 'Python', category_id: categories[2].id }
 ])
 
-results = Result.create!([
+Result.create!([
   { status: true, user_id: users[0].id, test_id: tests[0].id },
   { status: true, user_id: users[1].id, test_id: tests[1].id },
   { status: true, user_id: users[2].id, test_id: tests[2].id }
@@ -44,7 +44,7 @@ questions = Question.create!([
   { body: 'Python: Question 3', test_id: tests[2].id }
 ])
 
-answers = Answer.create!([
+Answer.create!([
   { body: 'Ruby: Answer 1', question_id: questions[0].id },
   { body: 'Javascript: Answer 2', question_id: questions[1].id },
   { body: 'Python: Answer 3', question_id: questions[2].id }

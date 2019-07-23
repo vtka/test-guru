@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   def show_passed_tests_by_level(level)
-    Test.joins("INNER JOIN users, results ON tests.id = results.test_id AND users.id = results.user_id").where(users: {id: self.id}, tests: {level: level})
+    Test.joins("INNER JOIN results ON tests.id = results.test_id").where(results: {user_id: self.id}, tests: {level: level})
   end
 end
 
