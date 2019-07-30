@@ -27,9 +27,9 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-    { level: 2, title: 'Ruby', category_id: categories[0].id },
-    { level: 3, title: 'Javascript', category_id: categories[1].id },
-    { level: 1, title: 'Python', category_id: categories[2].id }
+    { level: 2, title: 'Ruby', category_id: categories[0].id, author_id: users[0].id },
+    { level: 3, title: 'Javascript', category_id: categories[1].id, author_id: users[0].id },
+    { level: 1, title: 'Python', category_id: categories[2].id, author_id: users[0].id }
 ])
 
 Result.create!([
@@ -48,4 +48,8 @@ Answer.create!([
   { body: 'Ruby: Answer 1', question_id: questions[0].id },
   { body: 'Javascript: Answer 2', question_id: questions[1].id },
   { body: 'Python: Answer 3', question_id: questions[2].id }
+])
+
+TestsUser.create!([
+  { test_id: tests[0].id, user_id: users[0].id }
 ])
