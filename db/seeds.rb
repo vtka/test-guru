@@ -23,33 +23,33 @@ users = User.create!([
 categories = Category.create!([
   { title: 'back-end' },
   { title: 'front-end' },
-  { title: 'machine learning' },
+  { title: 'machine learning' }
 ])
 
 tests = Test.create!([
-    { level: 2, title: 'Ruby', category_id: categories[0].id, author_id: users[0].id },
-    { level: 3, title: 'Javascript', category_id: categories[1].id, author_id: users[0].id },
-    { level: 1, title: 'Python', category_id: categories[2].id, author_id: users[0].id }
+    { level: 2, title: 'Ruby', category: categories[0], author: users[0] },
+    { level: 3, title: 'Javascript', category: categories[1], author: users[1] },
+    { level: 1, title: 'Python', category: categories[2], author: users[0] }
 ])
 
 Result.create!([
-  { status: true, user_id: users[0].id, test_id: tests[0].id },
-  { status: true, user_id: users[1].id, test_id: tests[1].id },
-  { status: true, user_id: users[2].id, test_id: tests[2].id }
+  { status: true, user_id: users[0], test_id: tests[0] },
+  { status: true, user_id: users[1], test_id: tests[1] },
+  { status: true, user_id: users[2], test_id: tests[2] }
 ])
 
 questions = Question.create!([
-  { body: 'Ruby: Question 1', test_id: tests[0].id },
-  { body: 'Javascript: Question 2', test_id: tests[1].id },
-  { body: 'Python: Question 3', test_id: tests[2].id }
+  { body: 'Ruby: Question 1', test_id: tests[0] },
+  { body: 'Javascript: Question 2', test_id: tests[1] },
+  { body: 'Python: Question 3', test_id: tests[2] }
 ])
 
 Answer.create!([
-  { body: 'Ruby: Answer 1', question_id: questions[0].id },
-  { body: 'Javascript: Answer 2', question_id: questions[1].id },
-  { body: 'Python: Answer 3', question_id: questions[2].id }
+  { body: 'Ruby: Answer 1', question_id: questions[0] },
+  { body: 'Javascript: Answer 2', question_id: questions[1] },
+  { body: 'Python: Answer 3', question_id: questions[2] }
 ])
 
 TestsUser.create!([
-  { test_id: tests[0].id, user_id: users[0].id }
+  { test_id: tests[0], user_id: users[0] }
 ])

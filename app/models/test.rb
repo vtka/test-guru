@@ -1,11 +1,14 @@
 class Test < ApplicationRecord
-  def self.sort_desc_test_name_by_category(title)
-    Test.joins("INNER JOIN categories ON tests.category_id = categories.id").where(categories: {title: title}).order(title: :desc).pluck(:title)
-  end
-
-  has_many :questions
   belongs_to :category
-  # has_and_belongs_to_many :users
+  belongs_to :author, class_name: :User, foreign_key: :author_id
+  
+  has_many :questions, dependent: :nullify
   has_many :tests_users
   has_many :users, through: :tests_users
+  # belongs_to :created_tests, class_name: 'User', foreign_key: 'author_id'
+
+
+  def self.sort_desc_test_name_by_category(title)
+    joins(:category).where(categories: {title: title}).order(title: :desc).pluck(:title)
+  end
 end
