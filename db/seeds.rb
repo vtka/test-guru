@@ -32,24 +32,24 @@ tests = Test.create!([
     { level: 1, title: 'Python', category: categories[2], author: users[0] }
 ])
 
-Result.create!([
-  { status: true, user_id: users[0], test_id: tests[0] },
-  { status: true, user_id: users[1], test_id: tests[1] },
-  { status: true, user_id: users[2], test_id: tests[2] }
-])
+# Result.create!([
+#   { status: true, user_id: users[0], test_id: tests[0] },
+#   { status: true, user_id: users[1], test_id: tests[1] },
+#   { status: true, user_id: users[2], test_id: tests[2] }
+# ])
 
-questions = Question.create!([
-  { body: 'Ruby: Question 1', test_id: tests[0] },
-  { body: 'Javascript: Question 2', test_id: tests[1] },
-  { body: 'Python: Question 3', test_id: tests[2] }
-])
+# questions = Question.create!([
+#   { body: 'Ruby: Question 1', test_id: tests[0] },
+#   { body: 'Javascript: Question 2', test_id: tests[1] },
+#   { body: 'Python: Question 3', test_id: tests[2] }
+# ])
 
-Answer.create!([
-  { body: 'Ruby: Answer 1', question_id: questions[0] },
-  { body: 'Javascript: Answer 2', question_id: questions[1] },
-  { body: 'Python: Answer 3', question_id: questions[2] }
-])
+# Answer.create!([
+#   { body: 'Ruby: Answer 1', question_id: questions[0] },
+#   { body: 'Javascript: Answer 2', question_id: questions[1] },
+#   { body: 'Python: Answer 3', question_id: questions[2] }
+# ])
 
 TestsUser.create!([
-  { test_id: tests[0], user_id: users[0] }
+  { test: tests[0], user: users[0] }
 ])
