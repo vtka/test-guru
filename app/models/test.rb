@@ -7,12 +7,9 @@ class Test < ApplicationRecord
   has_many :users, through: :tests_users
 
   validates :title, presence: true
-
-  validates :level, numericality: { only_integer: true }
-
-  validate :validate_level_format
-
-  validates :title, uniqueness: true
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :title, uniqueness: { scope: :level,
+    message: "only one test of this kind per level" }
 
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
@@ -20,11 +17,9 @@ class Test < ApplicationRecord
   scope :by_category, -> (title) { 
     joins(:category)
     .where(categories: {title: title})
-    .order(title: :desc).pluck(:title) }
+    .order(title: :desc) }
 
-  private
-
-  def validate_level_format
-    errors.add(:level) if level.to_i < 0
+  def pluck_title(title)
+    Test.by_category(title).pluck(:title)
   end
 end
