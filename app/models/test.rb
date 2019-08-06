@@ -19,7 +19,7 @@ class Test < ApplicationRecord
     .where(categories: {title: title})
     .order(title: :desc) }
 
-  def pluck_title(title)
-    Test.by_category(title).pluck(:title)
+  def self.select_title(title)
+    by_category(title).pluck(:title)
   end
 end
