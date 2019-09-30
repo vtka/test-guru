@@ -2,8 +2,7 @@ class TestsController < ApplicationController
   before_action :find_test, only: :show
 
   def index
-    # @questions = Question.all
-    render plain: 'All tests'
+    @tests = Test.all
   end
 
   def show

@@ -1,0 +1,5 @@
+<h2>All tests</h2>
+
+<% @tests.each do |test| %>
+  <p><%= test.title %> | <%= link_to "view", test_questions_path(test) %> | [ <%= test.questions.count %> ]</p>
+<% end %>

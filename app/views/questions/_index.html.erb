@@ -1,0 +1,22 @@
+<tr>
+  <td>
+    <%= link_to "add", new_test_question_path %>
+    |
+  </td>
+  <td>
+    <%= link_to "back", tests_path %> 
+  </td>
+</tr>
+
+<% @questions.each do |question| %>
+  <p><%= question.body %></p>
+  <tr>
+    <td>
+      <%= link_to "delete", question_path(question), method: :delete %>
+      |
+    </td>
+    <td>
+      <%= link_to "edit", edit_question_path(question) %>
+    </td>
+  </tr>
+<% end %>
