@@ -1,6 +1,6 @@
 <tr>
   <td>
-    <%= link_to "add", new_test_question_path %>
+    <%= link_to "add", new_test_question_path(@test) %>
     |
   </td>
   <td>
@@ -8,7 +8,7 @@
   </td>
 </tr>
 
-<% @questions.each do |question| %>
+<% @test.questions.each do |question| %>
   <p><%= question.body %></p>
   <tr>
     <td>
