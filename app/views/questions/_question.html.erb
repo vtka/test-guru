@@ -1,0 +1,10 @@
+<p><%= question.body %></p>
+<tr>
+  <td>
+    <%= link_to "delete", question_path(question), method: :delete %>
+    |
+  </td>
+  <td>
+    <%= link_to "edit", edit_question_path(question) %>
+  </td>
+</tr>
