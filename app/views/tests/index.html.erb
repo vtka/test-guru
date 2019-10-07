@@ -2,4 +2,12 @@
 
 <%= link_to "Create New Test", new_test_path %>
 
-<%= render @tests %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Questions</th>
+    <th colspan="4">Actions</th>
+  </tr>
+  <%= render @tests %>
+</table>
