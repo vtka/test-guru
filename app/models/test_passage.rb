@@ -5,7 +5,7 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :set_first_question, on: :create
+  before_validation :set_first_question, on: %i[create update]
 
   def completed?
     current_question.nil?
@@ -16,7 +16,7 @@ class TestPassage < ApplicationRecord
       self.correct_questions += 1
     end
 
-    self.current_question = next_question
+    # self.current_question = next_question
     save!
   end
 
@@ -49,7 +49,11 @@ class TestPassage < ApplicationRecord
   end
 
   def set_first_question
-    self.current_question = test.questions.first if test.present?
+    if new_record?
+      self.current_question = test.questions.first
+    else
+      self.current_question = next_question
+    end
   end
 
   def correct_answers
