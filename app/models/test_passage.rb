@@ -4,6 +4,11 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :set_first_question, on: :create
+  # before_validation :next_question, on: :update
+
+  def completed?
+    current_question.nil?
+  end
 
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
@@ -11,16 +16,15 @@ class TestPassage < ApplicationRecord
     end
 
     self.current_question = next_question
-    save
+    save!
   end
 
   private
 
   def correct_answer?(answer_ids)
     correct_answers_count = correct_answers.count
-    
-    (correct_answers_count == correct_answers.where(id: answer_ids).count) && 
-    correct_answers_count == answer_ids.count
+
+    (correct_answers_count == correct_answers.where(id: answer_ids).count) && correct_answers_count == answer_ids.count
   end
 
   def set_first_question
