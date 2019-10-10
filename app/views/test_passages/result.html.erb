@@ -1,9 +1,9 @@
 <h1><%= @test_passage.test.title %> Test was Completed!</h1>
 
 <% if @test_passage.successful? %>
-  <p>Congratulations! Your final score is <span class="green"><%= @test_passage.final_score %></span></p>
+  <p>Congratulations! Your final score is <span class="success"><%= @test_passage.score_counter.to_i %></span></p>
 <% else %>
-  <p>Review the topic! Your final score is <span class="red"><%= @test_passage.final_score %></span></p>
+  <p>Review the topic! Your final score is <span class="failure"><%= @test_passage.score_counter.to_i %></span></p>
 <% end %>
 
 <p>
