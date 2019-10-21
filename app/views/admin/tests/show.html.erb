@@ -1,0 +1,14 @@
+<h2><%= @test.title %></h2>
+
+<tr>
+  <td>
+    <%= link_to "add", new_test_question_path(@test) %>
+    |
+  </td>
+  <td>
+    <%= link_to "back", admin_tests_path %> 
+  </td>
+</tr>
+
+<%#= render @test.questions %>
+<%= render partial: 'questions/question', collection: @test.questions %>
