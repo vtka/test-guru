@@ -2,13 +2,12 @@
 
 <tr>
   <td>
-    <%= link_to "add", new_test_question_path(@test) %>
+    <%= link_to "add", new_admin_test_question_path(@test) %>
     |
   </td>
   <td>
-    <%= link_to "back", admin_tests_path %> 
+    <%= link_to "back", admin_tests_path %>
   </td>
 </tr>
 
-<%#= render @test.questions %>
-<%= render partial: 'questions/question', collection: @test.questions %>
+<%= render @test.questions %>

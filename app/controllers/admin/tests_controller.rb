@@ -1,6 +1,6 @@
 class Admin::TestsController < Admin::BaseController
   
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_test, only: %i[show edit update destroy start]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
@@ -26,7 +26,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def create
-    @test = Test.new(test_params)
+    @test = current_user.created_tests.new(test_params)
 
     if @test.save
       redirect_to admin_test_path(@test)
@@ -37,7 +37,7 @@ class Admin::TestsController < Admin::BaseController
 
   def destroy
     @test.destroy!
-    redirect_to tests_path
+    redirect_to admin_tests_path
   end
 
   def start
@@ -56,6 +56,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :author_id, :category_id)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 end
