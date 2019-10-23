@@ -1,6 +1,5 @@
 class Admin::QuestionsController < Admin::BaseController
 
-  before_action :authenticate_user!
   before_action :find_question, only: [:destroy, :edit, :update, :show]
   before_action :find_test, only: [:create, :new]
 
