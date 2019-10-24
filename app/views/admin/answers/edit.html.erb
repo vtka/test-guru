@@ -6,5 +6,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'show', admin_answer_path(@answer) %> |
-<%= link_to 'back', admin_question_path(@answer.question) %>
+<%= link_to t('actions.view'), admin_answer_path(@answer) %> |
+<%= link_to t('actions.back'), admin_question_path(@answer.question) %>

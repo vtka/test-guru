@@ -1,0 +1,119 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: 'Создать тест'
+        update: 'Обновить тест'
+    label:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category_id: 'Категория'
+    select:
+      prompt: "Пожалуйста выберите"
+
+  layouts:
+    header:
+      welcome: 'Добро пожаловать'
+
+  shared:
+      errors:
+        header:
+          few: 'Обнаружено %{count} ошибки'
+          many: 'Обнаружено %{count} ошибок'
+          one: 'Обнаружена %{count} ошибка'
+          other: 'Обнаружено %{count} ошибки'
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: 'Название'
+      level: 'Уровень'
+      questions: 'Вопросы'
+      actions: 'Действия'
+
+  admin:
+      nav:
+        header: 'Административная панель TestGuru'
+        welcome: 'Добро пожаловать'
+      tests:
+        create:
+          success: "Тест был успешно создан"
+        index:
+          header: "Доступные Тесты"
+          title: 'Название'
+          level: 'Уровень'
+          questions: 'Вопросы'
+          actions: 'Действия'
+          new: 'Создать новый тест'
+        new:
+          header: 'Создать новый тест'
+        edit:
+          header: 'Редактировать тест %{title}'
+      questions:
+        show:
+          add_answer: 'Добавить новый ответ'
+
+  test_passages:
+    result:
+      header: 'Тест %{title} успешно завершен'
+      success: 'Поздравления! Ваше результат:'
+      failure: 'Рекомендуем повторить тему. Ваш результат:'
+      score: '%{score} процентов'
+      back: 'Назад к списку тестов'
+    show:
+      header: 'Прохождение %{title} теста'
+      question: 'Вопрос %{number} из %{size}'
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы успешно завершили тест на TestGuru!'
+
+  devise:
+    registrations:
+      new:
+        header: 'Станьте настоящим Guru'
+        length: 'символов минимум'
+    sessions:
+      new:
+        header: 'Войдите в чертоги Guru'
+    confirmations:
+      new:
+        header: 'Повторный запрос на подтверждение'
+    shared:
+      links:
+        login: 'Логин'
+        signup: 'Регистрация'
+        forgot_password: 'Забыли свой пароль?'
+        confirmation_instruction: 'Не получили инструкцию для подтверждения аккаунта?'
+        unlock_instruction: 'Не получили инструкцию для разблокировки аккаунта?'
+
+  global_buttons:
+    enter: 'Войти'
+    signup: 'Регистрация'
+    update: 'Редактировать'
+    logout: 'Выйти'
+    start: 'Начать'
+    next: 'Следующий'
+    resend_confirmation: 'Отправить инструкцию для подтверждения аккаунта'
+  
+  actions:
+    view: 'Посмотреть'
+    edit: 'Редактировать'
+    delete: 'Удалить'
+    back: 'Назад'
+    add: 'Добавить'
+
+  warning:
+    confirm: 'Вы уверены?'
+
+
+
+
+
+
+
+
+

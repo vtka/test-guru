@@ -1,13 +1,13 @@
 <p><%= question.body %></p>
 <tr>
   <td>
-    <%= link_to 'show', admin_question_path(question) %> |
+    <%= link_to t('actions.view'), admin_question_path(question) %> |
   </td>
   <td>
-    <%= link_to "delete", admin_question_path(question), method: :delete %>
+    <%= link_to t('actions.delete'), admin_question_path(question), method: :delete %>
     |
   </td>
   <td>
-    <%= link_to "edit", edit_admin_question_path(question) %>
+    <%= link_to t('actions.edit'), edit_admin_question_path(question) %>
   </td>
 </tr>
