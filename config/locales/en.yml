@@ -39,6 +39,10 @@ en:
     tests:
       create:
         success: 'Test was successfully created'
+      destroy:
+        deleted: 'Test was deleted'
+      update:
+        edited: 'Test was updated'
       index:
         header: 'Tricky Tests'
         title: 'Title'
@@ -51,8 +55,32 @@ en:
       edit:
         header: 'Edit %{title} test'
     questions:
+      create:
+        success: 'Question was successfully created'
+      destroy:
+        deleted: 'Question was deleted'
+      update:
+        edited: 'Question was updated'
       show:
         add_answer: 'Add new answer'
+      new:
+        header: 'Create new %{title} question'
+      form:
+        submit: 'Create question'
+    answers:
+      create:
+        success: 'Answer was successfully created'
+      destroy:
+        deleted: 'Answer was deleted'
+      update:
+        edited: 'Asnwer was updated'
+      new:
+        header: 'New answer'
+      edit:
+        header: 'Edit answer'
+      show:
+          answer: 'Answer'
+          correct: 'Correct answer'
 
   test_passages:
     result:
@@ -103,6 +131,7 @@ en:
     delete: 'Delete'
     back: 'Back'
     add: 'Add'
+    save: 'Save'
 
   warning:
     confirm: 'Are you sure?'

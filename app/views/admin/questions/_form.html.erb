@@ -1,11 +1,11 @@
-<%= form_with model: [:admin, @test, @question], local: true do |form| %>
+<%= form_with model: [:admin, @test, @question], local: true, class: 'border border-light' do |form| %>
   <%= render 'shared/errors', resource: @question %>
-  <p>
+  <div class="form-group col-md-4 mt-2">
     <%= form.label :body %><br>
-    <%= form.text_field :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-    <%= link_to t('actions.back'), admin_tests_path %>
-  </p>
+    <%= form.text_field :body, class: 'form-control' %>
+  </div>
+  <div class="form-group col-md-4">
+    <button type="submit" class="btn btn-primary"><%= t('.submit') %></button>
+    <%= link_to t('actions.back'), admin_test_path(@question.test), class: 'btn btn-primary' %>
+  </div>
 <% end %>

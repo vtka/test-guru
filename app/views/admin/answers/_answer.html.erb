@@ -1,8 +1,8 @@
-<li>
-  <%= answer.body %><br>
-  <%= link_to t('actions.view'), admin_answer_path(answer) %> |
-  <%= link_to t('actions.edit'), edit_admin_answer_path(answer) %> |
-  <%= link_to t('actions.delete'), admin_answer_path(answer),
+<tr>
+  <td><%= answer.body %></td>
+  <td><%= link_to t('actions.view'), admin_answer_path(answer) %></td>
+  <td><%= link_to t('actions.edit'), edit_admin_answer_path(answer) %></td>
+  <td><%= link_to t('actions.delete'), admin_answer_path(answer),
                         method: :delete,
-                        data: { confirm: t('warning.confirm')} %>
-</li>
+                        data: { confirm: t('warning.confirm')} %></td>
+</tr>

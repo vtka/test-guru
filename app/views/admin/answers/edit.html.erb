@@ -1,10 +1,6 @@
-<h1>Edit Answer</h1>
+<div class="card mt-4">
+  <h5 class="mt-4 col-md-6"><%= t('.header') %></h5>
+  <p class="mt-2 col-md-6"><%= @answer.question.body %></p>
+  <%= render 'form' %>
+</div>
 
-<p>
-  <%= @answer.question.body %>
-</p>
-
-<%= render 'form' %>
-
-<%= link_to t('actions.view'), admin_answer_path(@answer) %> |
-<%= link_to t('actions.back'), admin_question_path(@answer.question) %>

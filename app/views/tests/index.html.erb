@@ -1,11 +1,15 @@
-<h2><%= t('tests.index.header') %></h2>
+<h5 class="mt-4"><%= t('tests.index.header') %></h5>
 
-<table>
-  <tr>
-    <th><%= t('tests.index.title') %></th>
-    <th><%= t('tests.index.level') %></th>
-    <th><%= t('tests.index.questions') %></th>
-    <th><%= t('tests.index.actions') %></th>
-  </tr>
-  <%= render @tests %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"><%= t('tests.index.title') %></th>
+      <th scope="col"><%= t('tests.index.level') %></th>
+      <th scope="col"><%= t('tests.index.questions') %></th>
+      <th scope="col"><%= t('tests.index.actions') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @tests %>
+  </tbody>
 </table>

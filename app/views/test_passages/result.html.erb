@@ -1,12 +1,13 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<div class="container">
+  <h5 class="mt-4"><%= t('.header', title: @test_passage.test.title) %></h5>
 
-<% if @test_passage.successful? %>
-  <p><%= t('.success') %> <span class="success"><%= t('.score', score: @test_passage.score_counter.to_i) %></span></p>
-<% else %>
-  <p><%= t('.failure') %> <span class="failure"><%= t('.score', score: @test_passage.score_counter.to_i) %></span></p>
-<% end %>
+  <% if @test_passage.successful? %>
+    <p><%= t('.success') %> <span class="text-success"><%= t('.score', score: @test_passage.score_counter.to_i) %></span></p>
+  <% else %>
+    <p><%= t('.failure') %> <span class="text-danger"><%= t('.score', score: @test_passage.score_counter.to_i) %></span></p>
+  <% end %>
 
-<p>
-  <%= link_to t('.back'), tests_path %>
-</p>
-
+  <p>
+    <%= link_to t('.back'), tests_path %>
+  </p>
+</div>

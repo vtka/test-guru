@@ -7,10 +7,16 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-<body>
-  <%= render 'admin/nav' %>
-  <%= render 'shared/flash' %>
 
-  <%= yield %>
-</body>
+  <body class="d-flex flex-column">
+    <%= render 'admin/nav' %>
+    <div class="container">
+      <%= render 'shared/flash' %>
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
+  </body>
 </html>
+
+
+

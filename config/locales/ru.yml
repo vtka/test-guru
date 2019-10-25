@@ -40,7 +40,11 @@ ru:
         welcome: 'Добро пожаловать'
       tests:
         create:
-          success: "Тест был успешно создан"
+          success: 'Тест был успешно создан'
+        destroy:
+          deleted: 'Тест был успешно удален'
+        update:
+          edited: 'Тест был обновлен'
         index:
           header: "Доступные Тесты"
           title: 'Название'
@@ -52,9 +56,35 @@ ru:
           header: 'Создать новый тест'
         edit:
           header: 'Редактировать тест %{title}'
+        form:
+          submit: 'Создать тест'
       questions:
+        create:
+          success: 'Вопрос был успешно добавлен'
+        destroy:
+          deleted: 'Вопрос был удален'
+        update:
+          edited: 'Вопрос был обновлен'
         show:
           add_answer: 'Добавить новый ответ'
+        new:
+          header: 'Создать новый вопрос %{title}'
+        form:
+          submit: 'Создать вопрос'
+      answers:
+        create:
+          success: 'Ответ был успешно добавлен'
+        destroy:
+          deleted: 'Ответ был удален'
+        update:
+          edited: 'Ответ был обновлен'
+        new:
+          header: 'Новый ответ'
+        edit:
+          header: 'Редактировать ответ'
+        show:
+          answer: 'Ответ'
+          correct: 'Правильный ответ'
 
   test_passages:
     result:
@@ -105,6 +135,7 @@ ru:
     delete: 'Удалить'
     back: 'Назад'
     add: 'Добавить'
+    save: 'Сохранить'
 
   warning:
     confirm: 'Вы уверены?'

@@ -1,0 +1,39 @@
+@import 'bootstrap';
+
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.admin.navbar {
+  height: 80px;
+  line-height: 35px;
+}
+
+.admin.title {
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.admin-answer-checkbox {
+  margin-left: 15px;
+}
+

@@ -1,3 +1,4 @@
-<h1><%= question_header(@question) %></h1>
-
-<%= render 'form' %>
+<div class="card mt-4">
+  <h5 class="mt-4 col-md-6 mb-4"><%= t('.header', title: @question.test.title) %></h5>
+  <%= render 'form' %>
+</div>

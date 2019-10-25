@@ -1,13 +1,12 @@
-<h2><%= @test.title %></h2>
+<div class="container">
+  <h5 class="mt-4"><%= @test.title %></h5>
 
-<tr>
-  <td>
-    <%= link_to t('actions.add'), new_admin_test_question_path(@test) %>
-    |
-  </td>
-  <td>
-    <%= link_to t('actions.back'), admin_tests_path %>
-  </td>
-</tr>
+  <%= link_to t('actions.add'), new_admin_test_question_path(@test), class: 'btn btn-primary' %>
+  <%= link_to t('actions.back'), admin_tests_path, class: 'btn btn-primary' %><br>
 
-<%= render @test.questions %>
+  <table class="table table-hover col-md-6 mt-3">
+    <tbody>
+      <%= render @test.questions %>
+    </tbody>
+  </table>
+</div>

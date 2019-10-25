@@ -1,23 +1,19 @@
-<%= form_with model: [:admin, @test], local: true do |form| %>
+<%= form_with model: [:admin, @test], local: true, class: 'border border-light' do |form| %>
   <%= render 'shared/errors', resource: @test %>
-
-  <p>
+  <div class="form-group col-md-4 mt-2">
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
-
-  <p>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group col-md-4">
     <%= form.label :level %><br>
-    <%= form.text_field :level %>
-  </p>
-
-  <p>
+    <%= form.text_field :level, class: 'form-control' %>
+  </div>
+  <div class="form-group col-md-4">
     <%= form.label :category_id %><br>
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-    <%= link_to t('actions.back'), admin_tests_path %>
-  </p>
+  </div>
+  <div class="form-group col-md-4">
+    <button type="submit" class="btn btn-primary"><%= t('.submit') %></button>
+    <%= link_to t('actions.back'), admin_tests_path, class: 'btn btn-primary' %>
+  </div>
 <% end %>

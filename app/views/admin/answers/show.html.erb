@@ -1,17 +1,21 @@
-<h1>Question</h1>
+<div class="container">
+  <h5 class="mt-4"><%= @answer.question.test.title %></h5>
+  <%#= link_to t('actions.edit'), edit_admin_question_path(@question) %>
+  <p><%= @answer.question.body %></p>
 
-<p>
- <%= @answer.question.body %> 
-</p>
+  <%= link_to t('actions.edit'), edit_admin_answer_path(@answer), class: 'btn btn-primary' %>
+  <%= link_to t('actions.back'), admin_question_path(@answer.question), class: 'btn btn-primary' %><br>
 
-<p>
-  <b>Answer:</b>
-  <%= @answer.body %>
-</p>
-
-<p>
-  <b>Correct:</b>
-  <%= @answer.correct %>
-</p>
-
-<%= link_to t('actions.back'), admin_question_path(@answer.question) %>
+  <table class="table table-hover col-md-6 mt-3">
+    <tbody>
+      <tr>
+        <th><%= t('.answer') %></th>
+        <th><%= t('.correct') %></th>
+      </tr>
+      <tr>
+        <td><%= @answer.body %></td>
+        <td><%= @answer.correct %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
