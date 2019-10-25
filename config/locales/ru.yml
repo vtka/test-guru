@@ -17,6 +17,7 @@ ru:
   layouts:
     header:
       welcome: 'Добро пожаловать'
+      manage: 'Управление тестами |'
 
   shared:
       errors:
@@ -38,6 +39,7 @@ ru:
       nav:
         header: 'Административная панель TestGuru'
         welcome: 'Добро пожаловать'
+        test_path: 'Тесты'
       tests:
         create:
           success: 'Тест был успешно создан'

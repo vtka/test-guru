@@ -17,6 +17,7 @@ en:
   layouts:
     header:
       welcome: 'Welcome'
+      manage: 'Manage tests |'
 
   shared:
     errors:
@@ -36,6 +37,7 @@ en:
     nav:
       header: 'TestGuru Admin Panel'
       welcome: 'Welcome'
+      test_path: 'Tests'
     tests:
       create:
         success: 'Test was successfully created'

@@ -2,8 +2,10 @@
   <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
   <span class="navbar-text">
     <% if user_signed_in? %>
-      <%= t('.welcome') %>, <b><%= current_user.email %></b>
-      <%#= link_to "Guru", 'about' %> |
+      <%= t('.welcome') %>, <b><%= current_user.email %></b> |
+      <% if current_user.admin? %>
+        <%= link_to t('.manage'), admin_tests_path %>
+      <% end %>
       <%= link_to t('global_buttons.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to 'Log in', new_session_path(resource_name) %> |
