@@ -98,6 +98,9 @@ ru:
     show:
       header: 'Прохождение %{title} теста'
       question: 'Вопрос %{number} из %{size}'
+    gist:
+      success: 'Gist успешно сохранен!'
+      failure: 'Во время сохранения Gist произошла ошибка!'
 
   tests_mailer:
     completed_test:

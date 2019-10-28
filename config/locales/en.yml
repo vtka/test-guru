@@ -94,6 +94,10 @@ en:
     show:
       header: 'Passing %{title} test'
       question: 'Question %{number} of %{size}'
+    gist:
+      success: 'Gist was successfully created!'
+      failure: 'An error occured while saving Gist!'
+
 
   tests_mailer:
     completed_test:
