@@ -2,6 +2,8 @@ class TestPassagesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_test_passage, only: %i[show update result gist]
 
+  include ApplicationHelper
+
   def show; end
 
   def result; end
@@ -19,14 +21,15 @@ class TestPassagesController < ApplicationController
 
   def gist
     result = GistQuestionService.new(@test_passage.current_question).call
+    url = result.html_url
     # refactoring & move to helper
-    flash_options = if result.success?
-      { notice: t('.success') }
-    else
-      { alert: t('.failure') }
-    end
+    flash_options = if result.html_url.present?
+                      { notice: t('.success', gist: url) }
+                    else
+                      { alert: t('.failure') }
+                    end
 
-    redirect to @test_passage, flash_options
+    redirect_to @test_passage, flash_options
   end
 
   private

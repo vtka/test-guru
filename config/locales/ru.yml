@@ -99,7 +99,7 @@ ru:
       header: 'Прохождение %{title} теста'
       question: 'Вопрос %{number} из %{size}'
     gist:
-      success: 'Gist успешно сохранен!'
+      success: 'Gist успешно сохранен! Ваш Gist <a href="%{gist}">здесь</a>"'
       failure: 'Во время сохранения Gist произошла ошибка!'
 
   tests_mailer:
