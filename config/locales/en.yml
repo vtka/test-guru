@@ -38,6 +38,13 @@ en:
       header: 'TestGuru Admin Panel'
       welcome: 'Welcome'
       test_path: 'Tests'
+      gist: 'Gists'
+    gists:
+      index:
+        header: 'Gist table'
+        author: 'Author'
+        question: 'Question'
+        hash: 'Hash'
     tests:
       create:
         success: 'Test was successfully created'

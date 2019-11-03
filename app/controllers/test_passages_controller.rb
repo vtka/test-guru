@@ -24,6 +24,11 @@ class TestPassagesController < ApplicationController
     url = result.html_url
     # refactoring & move to helper
     flash_options = if result.html_url.present?
+                      Gist.create!(user_id: current_user.id,
+                                   question_id: @test_passage.current_question.id,
+                                   gist_url: url,
+                                   hash_id: result.id
+                      )
                       { notice: t('.success', gist: url) }
                     else
                       { alert: t('.failure') }

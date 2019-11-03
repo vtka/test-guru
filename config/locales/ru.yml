@@ -40,6 +40,13 @@ ru:
         header: 'Административная панель TestGuru'
         welcome: 'Добро пожаловать'
         test_path: 'Тесты'
+        gist: 'Gists'
+      gists:
+        index:
+          header: 'Gist таблица'
+          author: 'Автор'
+          question: 'Вопрос'
+          hash: 'Хэш'
       tests:
         create:
           success: 'Тест был успешно создан'
