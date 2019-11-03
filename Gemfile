@@ -52,6 +52,9 @@ gem "octokit", "~> 4.0"
 # ENV
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
+# Pagination
+gem 'will_paginate', '~> 3.1.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

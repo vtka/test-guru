@@ -13,4 +13,5 @@
       <%= render @gists %>
     </tbody>
   </table>
+  <%= will_paginate @gists, previous_label: 'Back', next_label: 'Next' %>
 </div>
