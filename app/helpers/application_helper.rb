@@ -6,8 +6,4 @@ module ApplicationHelper
       key = 'primary'
     end
   end
-
-  def controller_link(text, href)
-    "<a href='#{href}'>#{text}</a>".html_safe
-  end
 end

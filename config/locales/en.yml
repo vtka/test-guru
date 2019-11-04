@@ -102,7 +102,7 @@ en:
       header: 'Passing %{title} test'
       question: 'Question %{number} of %{size}'
     gist:
-      success: 'Gist was successfully created! Open your <a href="%{gist}">Gist</a>'
+      success: 'Gist was successfully created! Open your <a href="%{gist}" target="_blank">Gist</a>'
       failure: 'An error occured while saving Gist!'
 
 
