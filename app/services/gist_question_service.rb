@@ -6,8 +6,24 @@ class GistQuestionService
     @client = client
   end
 
+  class Success
+    attr_reader :url, :id
+
+    def initialize(url:, id:)
+      @url = url
+      @id = id
+    end
+
+    def success?
+      true
+    end
+  end
+
   def call
-    @client.create_gist(gist_params)
+    response = @client.create_gist(gist_params)
+    if response.html_url.present?
+      Success.new(url: response.html_url, id: response.id)
+    end
   end
 
   private
