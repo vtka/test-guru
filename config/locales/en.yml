@@ -38,6 +38,13 @@ en:
       header: 'TestGuru Admin Panel'
       welcome: 'Welcome'
       test_path: 'Tests'
+      gist: 'Gists'
+    gists:
+      index:
+        header: 'Gist table'
+        author: 'Author'
+        question: 'Question'
+        hash: 'Hash'
     tests:
       create:
         success: 'Test was successfully created'
@@ -94,6 +101,10 @@ en:
     show:
       header: 'Passing %{title} test'
       question: 'Question %{number} of %{size}'
+    gist:
+      success: 'Gist was successfully created! Open your <a href="%{gist}" target="_blank">Gist</a>'
+      failure: 'An error occured while saving Gist!'
+
 
   tests_mailer:
     completed_test:
