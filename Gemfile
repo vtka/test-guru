@@ -42,12 +42,13 @@ gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 # VIEW
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'octicons_helper'
 
 # NETWORKING
 gem 'faraday'
 
 # GITHUB
-gem "octokit", "~> 4.0"
+gem 'octokit', '~> 4.0'
 
 # ENV
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
