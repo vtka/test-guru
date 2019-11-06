@@ -16,12 +16,12 @@
                   <% if @minimum_password_length %>
                     <em>(<%= @minimum_password_length %> <%= t('.length')%>)</em>
                   <% end %>
-                  <%= f.password_field :password, autocomplete: 'new-password', class: 'form-control', placeholder: 'Password', onkeyup: 'check();', id: 'password'  %>
+                  <%= f.password_field :password, autocomplete: 'new-password', class: 'form-control', placeholder: 'Password', onkeyup: 'match();', id: 'password'  %>
                 </div>
 
                 <div class="form-label-group">
                   <%= f.label :password_confirmation, class: 'inputPassword' %>
-                  <%= f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control', id: 'confirm_password', onkeyup: 'check();' %>
+                  <%= f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control', id: 'confirm_password', onkeyup: 'match();' %>
                   <span id='message'></span>
                 </div>
 
