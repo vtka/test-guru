@@ -19,10 +19,18 @@ class GistQuestionService
     end
   end
 
+  class Failure
+    def success?
+      false
+    end
+  end
+
   def call
     response = @client.create_gist(gist_params)
     if response.html_url.present?
       Success.new(url: response.html_url, id: response.id)
+    else
+      Failure.new
     end
   end
 
