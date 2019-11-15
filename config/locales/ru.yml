@@ -67,6 +67,8 @@ ru:
           header: 'Редактировать тест %{title}'
         form:
           submit: 'Создать тест'
+        form-inline:
+          submit:  'Ок'
       questions:
         create:
           success: 'Вопрос был успешно добавлен'

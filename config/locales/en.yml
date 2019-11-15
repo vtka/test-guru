@@ -76,6 +76,8 @@ en:
         header: 'Create new %{title} question'
       form:
         submit: 'Create question'
+      form-inline:
+          submit:  'Ok'
     answers:
       create:
         success: 'Answer was successfully created'
