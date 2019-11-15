@@ -7,12 +7,12 @@ document.addEventListener('turbolinks:load', function() {
     }
   }
 
-  // var errors = document.querySelector('.resource-errors')
+  var errors = document.querySelector('.resource-errors')
 
-  // if (errors) {
-    // var resourceId = errors.dataset.resourceId
-    // formInlineHandler(resourceId)
-  // }
+  if (errors) {
+    var resourceId = errors.dataset.resourceId
+    formInlineHandler(resourceId)
+  }
 })
 
 function formInlineLinkHandler(event) {
@@ -23,17 +23,19 @@ function formInlineLinkHandler(event) {
 }
 
 function formInlineHandler(testId) {
-  var link = document.querySelector('form-inline-link[data-test-id="' + testId + '"]')
-  var testTitle = document.querySelector('test-title[data-test-id="' + testId + '"]')
-  var formInline = document.querySelector('form-inline[data-test-id="' + testId + '"]')
+  var link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]')
+  var testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]')
+  var formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
 
-  if(formInline.classList.contains('hide')) {
-    testTitle.classList.add('hide')
-    formInline.classList.remove('hide')
-    link.textContent = 'Cancel'
-  } else {
-    testTitle.classList.remove('hide')
-    formInline.classList.hide('hide')
-    link.textContent = 'Edit'
+  if(link) {
+    if(formInline.classList.contains('hide')) {
+      testTitle.classList.add('hide')
+      formInline.classList.remove('hide')
+      link.textContent = 'Отменить'
+    } else {
+      testTitle.classList.remove('hide')
+      formInline.classList.add('hide')
+      link.textContent = 'Редактировать'
+    }
   }
 }
