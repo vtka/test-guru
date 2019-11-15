@@ -1,9 +1,11 @@
 <div class="container">
   <h5 class="mt-4"><%= t('.header', title: @test_passage.test.title) %></h5>
-
-  <p>
-    <%= t('.question', number: @test_passage.current_question_number, size: @test_passage.test.questions.size) %>
-  </p>
+  
+  <%= content_tag :div, 
+                  t('.question', number: @test_passage.current_question_number, size: @test_passage.test.questions.size), 
+                  class: 'progress-bar bg-success progress-bar-striped', 
+                  data: { question_number: @test_passage.current_question_number,
+                          question_size: @test_passage.test.questions.size } %>
 
   <p>
     <b><%= @test_passage.current_question.body %></b>
