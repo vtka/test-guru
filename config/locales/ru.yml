@@ -18,6 +18,8 @@ ru:
     header:
       welcome: 'Добро пожаловать'
       manage: 'Управление тестами |'
+      signup: 'Регистрация'
+      login: 'Вход'
 
   shared:
       errors:
@@ -66,7 +68,7 @@ ru:
         edit:
           header: 'Редактировать тест %{title}'
         form:
-          submit: 'Создать тест'
+          submit: 'Подтвердить'
         form-inline:
           submit:  'Ок'
       questions:
@@ -96,6 +98,11 @@ ru:
         show:
           answer: 'Ответ'
           correct: 'Правильный ответ'
+  
+  users:
+    sessions:
+      create: 
+        welcome: 'Добро пожаловать %{user}'
 
   test_passages:
     result:

@@ -8,8 +8,8 @@
       <% end %>
       <%= link_to t('global_buttons.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to 'Log in', new_session_path(resource_name) %> |
-      <%= link_to 'Sign up', new_registration_path(resource_name) %>
+      <%= link_to t('.login'), new_session_path(resource_name) %> |
+      <%= link_to t('.signup'), new_registration_path(resource_name) %>
     <% end %>
   </span>
 </nav>

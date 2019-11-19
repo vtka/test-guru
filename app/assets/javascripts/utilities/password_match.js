@@ -4,10 +4,10 @@ var match = function() {
   var passwordElement = document.getElementById('password').value
 
   if (confirmPasswordElement == passwordElement) {
-      matchResult('#5cb85c', 'matching')
+      matchResult('#5cb85c', 'Совпадает')
   } 
   else if (confirmPasswordElement != passwordElement) {
-      matchResult('#d9534f', 'not matching')
+      matchResult('#d9534f', 'Не совпадает')
   }
   
   function matchResult(color, message) {

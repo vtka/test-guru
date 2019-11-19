@@ -18,6 +18,8 @@ en:
     header:
       welcome: 'Welcome'
       manage: 'Manage tests |'
+      signup: 'Sign up'
+      login: 'Log in'
 
   shared:
     errors:
@@ -63,6 +65,10 @@ en:
         header: 'Create new test'
       edit:
         header: 'Edit %{title} test'
+      form:
+        submit: 'Submit'
+      form-inline:
+        submit:  'Ok'
     questions:
       create:
         success: 'Question was successfully created'
@@ -76,8 +82,6 @@ en:
         header: 'Create new %{title} question'
       form:
         submit: 'Create question'
-      form-inline:
-          submit:  'Ok'
     answers:
       create:
         success: 'Answer was successfully created'
@@ -92,6 +96,11 @@ en:
       show:
           answer: 'Answer'
           correct: 'Correct answer'
+  
+  users:
+    sessions:
+      create: 
+        welcome: 'Welcome %{user}'
 
   test_passages:
     result:
