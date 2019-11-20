@@ -11,8 +11,20 @@ en:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+      contact:
+        name: 'Name'
+        email: 'Email'
+        message: 'Message'
+        nickname: 'Nickname'
     select:
       prompt: "Please select"
+  
+  contacts:
+    new:
+      header: 'Send us your inquiry'
+    create:
+      thanks: 'Thank you for your message!'
+      message: 'We will get back to you shortly'
 
   layouts:
     header:
@@ -20,6 +32,9 @@ en:
       manage: 'Manage tests |'
       signup: 'Sign up'
       login: 'Log in'
+    footer:
+      feedback: 'Contact us'
+      promo: 'Test Guru - a web platform for learning programming skills!'
 
   shared:
     errors:
@@ -148,6 +163,7 @@ en:
     next: 'Next'
     start: 'Start'
     resend_confirmation: 'Resend confirmation instruction'
+    send: 'Send'
   
   actions:
     view: 'View'

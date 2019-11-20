@@ -11,8 +11,20 @@ ru:
         title: 'Название'
         level: 'Уровень'
         category_id: 'Категория'
+      contact:
+        name: 'Имя'
+        email: 'Email'
+        message: 'Сообщение'
+        nickname: 'Никнейм'
     select:
       prompt: "Пожалуйста выберите"
+  
+  contacts:
+    new:
+      header: 'Свяжитесь с нами'
+    create:
+      thanks: 'Спасибо за ваше сообщение!'
+      message: 'Мы свяжемся с вами в ближайшее время'
 
   layouts:
     header:
@@ -20,6 +32,9 @@ ru:
       manage: 'Управление тестами |'
       signup: 'Регистрация'
       login: 'Вход'
+    footer:
+      feedback: 'Обратная связь'
+      promo: 'Test Guru - веб-платформа для обучения навыков программирования!'
 
   shared:
       errors:
@@ -149,6 +164,7 @@ ru:
     start: 'Начать'
     next: 'Следующий'
     resend_confirmation: 'Отправить инструкцию для подтверждения аккаунта'
+    send: 'Отправить'
   
   actions:
     view: 'Посмотреть'

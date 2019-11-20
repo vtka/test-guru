@@ -1,7 +1,7 @@
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
   <div class="container text-center">
     <small><%= current_year %> | <%= github_url('vtka', 'test-guru') %> |
-      <%= thinknetica_link %> | Test Guru - веб-платформа для обучения навыков программирования!
+      <%= thinknetica_link %> | <%= link_to t('.feedback'), new_contact_path %> | <%= t('.promo') %>
     </small>
   </div>
 </footer>

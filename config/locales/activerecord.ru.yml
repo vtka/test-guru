@@ -6,6 +6,7 @@ ru:
       admin: 'Администратор'
       question: 'Вопрос'
       answer: 'Ответ'
+      contact: 'Обратная связь'
 
     attributes:
       test:
@@ -19,4 +20,3 @@ ru:
       answer:
         body: 'Тело ответа'
         correct: 'Правильный'
-

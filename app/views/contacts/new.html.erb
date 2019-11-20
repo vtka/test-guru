@@ -1,21 +1,24 @@
-<h1>Say Hello!</h1>
+<div class="container">
+  <h5 class="mt-4"><%= t('.header') %></h5>
+  <%= form_for @contact, class: 'border border-light' do |f| %>
+    <div class="form-group col-md-4 mt-2">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', required: true %>
+    </div>
+    <div class="form-group col-md-4 mt-2">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control', required: true %>
+    </div>
+    <div class="form-group col-md-4 mt-2">
+      <%= f.label :message %>
+      <%= f.text_area :message, class: 'form-control', required: true %>
+    <div>
 
-<div>
-  <%= form_for @contact do |f| %>
-    <%= f.label :name %><br>
-    <%= f.text_field :name, required: true %><br>
-
-    <%= f.label :email %><br>
-    <%= f.email_field :email, required: true %><br>
-
-    <%= f.label :message %><br>
-    <%= f.text_area :message, required: true %><br>
-
-    <div class='hide'>
-      <%= f.label :nickname %><br>
-      <%= f.text_field :nickname, hint: 'leave this field blank' %>
+    <div class='hide form-group col-md-4 mt-2'>
+      <%= f.label :nickname %>
+      <%= f.text_field :nickname, class: 'form-control', hint: 'leave this field blank' %>
     </div>
 
-    <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+    <%= f.submit t('global_buttons.send'), class: 'btn btn-primary mt-2' %>
   <% end %>
 </div>
