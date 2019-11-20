@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# MAIL FORM
+gem 'mail_form'
+
 # AUTH
 gem 'devise', '~> 4.0'
 
