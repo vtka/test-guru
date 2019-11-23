@@ -1,0 +1,17 @@
+<tr>
+  <td class='align-middle'>
+    <%= content_tag :span, badge.name, class: 'test-title', data: { badge_id: badge.id } %>
+    <%#= render 'form-inline', badge: badge == @badge ? @tebadgest : badge %>
+  </td>
+  <td class='align-middle'><%= badge.description %></td>
+  <td class='align-middle'><%= link_to t('actions.view'), admin_badge_path(badge) %></td>
+  <td class='align-middle'><%= 
+                           link_to t('actions.edit'),
+                           edit_admin_badge_path(badge),
+                           data: { badge_id: badge.id } %>
+  </td>
+  <td class='align-middle'><%= link_to t('actions.delete'),
+                  admin_badge_path(badge),
+                  method: :delete,
+                  data: { confirm: t('warning.confirm') } %></td>
+</tr>
