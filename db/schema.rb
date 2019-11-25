@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_22_090339) do
+ActiveRecord::Schema.define(version: 2019_11_25_104935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,12 +29,23 @@ ActiveRecord::Schema.define(version: 2019_11_22_090339) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "rule"
   end
 
   create_table "categories", force: :cascade do |t|
     t.text "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "earned_badges", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "badge_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["badge_id"], name: "index_earned_badges_on_badge_id"
+    t.index ["user_id", "badge_id"], name: "index_earned_badges_on_user_id_and_badge_id", unique: true
+    t.index ["user_id"], name: "index_earned_badges_on_user_id"
   end
 
   create_table "gists", force: :cascade do |t|
@@ -115,4 +126,6 @@ ActiveRecord::Schema.define(version: 2019_11_22_090339) do
     t.index ["type"], name: "index_users_on_type"
   end
 
+  add_foreign_key "earned_badges", "badges"
+  add_foreign_key "earned_badges", "users"
 end
