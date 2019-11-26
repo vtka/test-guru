@@ -1,5 +1,4 @@
 class TestsController < ApplicationController
-  
   before_action :authenticate_user!
   before_action :set_test, only: %i[start]
 
@@ -19,5 +18,4 @@ class TestsController < ApplicationController
   def set_test
     @test = Test.find(params[:id])
   end
-
 end

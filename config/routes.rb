@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
   get 'users/new'
+  get 'earned_badges/index'
 
   root 'tests#index'
 

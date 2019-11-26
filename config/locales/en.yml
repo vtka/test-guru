@@ -11,6 +11,10 @@ en:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+      badge:
+        name: 'Name'
+        description: 'Description'
+        rule: 'Condition'
       contact:
         name: 'Name'
         email: 'Email'
@@ -49,6 +53,14 @@ en:
       level: 'Level'
       questions: 'Questions'
       actions: 'Actions'
+  
+  earned_badges:
+    index:
+      header: 'My Achievements'
+      id: 'ID'
+      name: 'Name'
+      description: 'Description'
+      image: 'Badge'
 
   admin:
     nav:
@@ -111,6 +123,21 @@ en:
       show:
           answer: 'Answer'
           correct: 'Correct answer'
+    badges:
+      index:
+        new: 'New badge'
+        header: 'Badge List'
+        name: 'Name'
+        description: 'Description'
+        actions: 'Actions'
+      edit:
+        header: 'Edit Badge'
+      create:
+        success: 'Badge was successfully created'
+      destroy:
+        deleted: 'Badge was deleted'
+      update:
+        edited: 'Badge was successfully edited'
   
   users:
     sessions:

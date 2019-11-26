@@ -11,6 +11,10 @@ ru:
         title: 'Название'
         level: 'Уровень'
         category_id: 'Категория'
+      badge:
+        name: 'Название'
+        description: 'Описание'
+        rule: 'Условие выдачи'
       contact:
         name: 'Имя'
         email: 'Email'
@@ -51,6 +55,14 @@ ru:
       level: 'Уровень'
       questions: 'Вопросы'
       actions: 'Действия'
+
+  earned_badges:
+    index:
+      header: 'Мои награды'
+      id: 'ID'
+      name: 'Название награды'
+      description: 'Описание награды'
+      image: 'Награда'
 
   admin:
       nav:
@@ -113,6 +125,21 @@ ru:
         show:
           answer: 'Ответ'
           correct: 'Правильный ответ'
+      badges:
+        index:
+          new: 'Новая награда'
+          header: 'Список наград'
+          name: 'Название награды'
+          description: 'Описание награды'
+          actions: 'Действия'
+        edit:
+          header: 'Редактировать награду'
+        create:
+          success: 'Награда была успешно создана'
+        destroy:
+          deleted: 'Награда была успешно удалена'
+        update:
+          edited: 'Награда была обновлена'
   
   users:
     sessions:

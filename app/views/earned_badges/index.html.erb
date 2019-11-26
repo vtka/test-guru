@@ -1,0 +1,23 @@
+<div class="container">
+  <h5 class="mt-4"><%= t('.header') %></h5>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col"><%= t('.id') %></th>
+        <th scope="col"><%= t('.name') %></th>
+        <th scope="col"><%= t('.description') %></th>
+        <th scope="col"><%= t('.image') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% current_user.badges.each do |badge| %>
+        <td><%= badge.id %></td>
+        <td><%= badge.name %></td>
+        <td><%= badge.description %></td>
+        <td>image</td>
+      <% end %>
+    </tbody>
+  </table>
+  <%#= will_paginate @gists, previous_label: 'Back', next_label: 'Next' %>
+</div>
