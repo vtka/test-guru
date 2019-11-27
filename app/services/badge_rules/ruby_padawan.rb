@@ -1,5 +1,5 @@
 module BadgeRules
-  class RubyLevelOne
+  class RubyPadawan
     def call(test_passage, badge_id)
       if test_passage.test.title == 'Ruby' && test_passage.successful? && test_passage.test.level == 1
         puts test_passage.test.title

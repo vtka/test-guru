@@ -13,10 +13,7 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      if @test_passage.successful?
-        @test_passage.success = true
-        # @test_passage.save!
-      end
+      @test_passage.mark_as_passed if @test_passage.successful?
 
       BadgeService.new.call(@test_passage)
 

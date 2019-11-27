@@ -29,9 +29,10 @@ class TestPassage < ApplicationRecord
     (correct_questions * 100) / test.questions.count
   end
 
-  # def complete_category?
-
-  # end
+  def mark_as_passed
+    self.success = true
+    save(validate: false)
+  end
 
   private
 

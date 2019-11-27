@@ -1,5 +1,5 @@
 module BadgeRules
-  class RubyEnthusiast
+  class RubyYoungling
     def call(test_passage, badge_id)
       if test_passage.test.title == 'Ruby' && test_passage.successful?
         puts test_passage.test.title

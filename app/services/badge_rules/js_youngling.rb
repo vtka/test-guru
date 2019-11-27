@@ -1,5 +1,5 @@
 module BadgeRules
-  class JsEnthusiast
+  class JsYoungling
     def call(test_passage, badge_id)
       if test_passage.test.title == 'Javascript' && test_passage.successful?
         puts test_passage.test.title
