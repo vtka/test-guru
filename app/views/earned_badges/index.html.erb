@@ -12,10 +12,12 @@
     </thead>
     <tbody>
       <% current_user.badges.each do |badge| %>
-        <td><%= badge.id %></td>
-        <td><%= badge.name %></td>
-        <td><%= badge.description %></td>
-        <td>image</td>
+        <tr>
+          <td><%= badge.id %></td>
+          <td><%= badge.name %></td>
+          <td><%= badge.description %></td>
+          <td><%#= image_tag(badge.image, size: '15x15') %></td>
+        </tr>
       <% end %>
     </tbody>
   </table>

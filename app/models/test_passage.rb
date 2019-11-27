@@ -29,6 +29,10 @@ class TestPassage < ApplicationRecord
     (correct_questions * 100) / test.questions.count
   end
 
+  # def complete_category?
+
+  # end
+
   private
 
   def correct_answer?(answer_ids)
