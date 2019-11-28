@@ -130,6 +130,7 @@ en:
         name: 'Name'
         description: 'Description'
         actions: 'Actions'
+        image: 'Badge'
       edit:
         header: 'Edit Badge'
       create:

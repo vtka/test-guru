@@ -132,6 +132,7 @@ ru:
           name: 'Название награды'
           description: 'Описание награды'
           actions: 'Действия'
+          image: 'Награда'
         edit:
           header: 'Редактировать награду'
         create:

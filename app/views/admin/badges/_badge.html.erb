@@ -4,6 +4,11 @@
     <%#= render 'form-inline', badge: badge == @badge ? @tebadgest : badge %>
   </td>
   <td class='align-middle'><%= badge.description %></td>
+  <td class='align-middle'>
+    <% if badge.avatar.attached? %>
+      <image src="<%=(url_for(badge.avatar))%>">
+    <% end %>
+  </td>
   <td class='align-middle'><%= link_to t('actions.view'), admin_badge_path(badge) %></td>
   <td class='align-middle'><%= 
                            link_to t('actions.edit'),

@@ -16,7 +16,11 @@
           <td><%= badge.id %></td>
           <td><%= badge.name %></td>
           <td><%= badge.description %></td>
-          <td><%#= image_tag(badge.image, size: '15x15') %></td>
+          <td>
+            <% if badge.avatar.attached? %>
+              <image src="<%=(url_for(badge.avatar))%>">
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
