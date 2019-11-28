@@ -15,9 +15,11 @@ class Test < ApplicationRecord
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
   scope :by_category, -> (title) { 
-    joins(:category)
-    .where(categories: {title: title})
-    .order(title: :desc) }
+      joins(:category)
+        .where(categories: { title: title })
+        .order(title: :desc) }
+  scope :categories_easy, -> { where(category_id: [1, 2, 3], level: 1) }
+  scope :category_one, -> { where(category_id: 1) }
 
   def self.select_title(title)
     by_category(title).pluck(:title)

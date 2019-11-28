@@ -7,6 +7,10 @@ class TestPassage < ApplicationRecord
 
   before_validation :set_next_question, on: %i[create update]
 
+  scope :in_category, ->(cat_id) { includes(:test).where(tests: { category_id: cat_id }) }
+  scope :success, -> { where(success: true) }
+  scope :with_level, ->(level) { includes(:test).where(tests: { level: level }) }
+
   def completed?
     current_question.nil?
   end
