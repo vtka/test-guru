@@ -1,0 +1,12 @@
+<tr>
+  <td class='align-middle'>
+    <%= content_tag :span, badge.name, class: 'test-title', data: { badge_id: badge.id } %>
+    <%#= render 'form-inline', badge: badge == @badge ? @tebadgest : badge %>
+  </td>
+  <td class='align-middle'><%= badge.description %></td>
+  <td class='align-middle'>
+    <% if badge.avatar.attached? %>
+      <image src="<%=(url_for(badge.avatar))%>">
+    <% end %>
+  </td>
+</tr>

@@ -33,7 +33,7 @@ ru:
   layouts:
     header:
       welcome: 'Добро пожаловать'
-      manage: 'Управление тестами |'
+      manage: 'Администратор |'
       signup: 'Регистрация'
       login: 'Вход'
     footer:
@@ -146,6 +146,15 @@ ru:
     sessions:
       create: 
         welcome: 'Добро пожаловать %{user}'
+  
+  badges:
+    index:
+      new: 'Новая награда'
+      header: 'Список наград'
+      name: 'Название награды'
+      description: 'Описание награды'
+      actions: 'Действия'
+      image: 'Награда'
 
   test_passages:
     result:

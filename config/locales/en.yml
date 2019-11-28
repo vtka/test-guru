@@ -33,7 +33,7 @@ en:
   layouts:
     header:
       welcome: 'Welcome'
-      manage: 'Manage tests |'
+      manage: 'Admin |'
       signup: 'Sign up'
       login: 'Log in'
     footer:
@@ -144,6 +144,15 @@ en:
     sessions:
       create: 
         welcome: 'Welcome %{user}'
+  
+  badges:
+    index:
+      new: 'New badge'
+      header: 'Badge List'
+      name: 'Name'
+      description: 'Description'
+      actions: 'Actions'
+      image: 'Badge'
 
   test_passages:
     result:
