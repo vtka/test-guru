@@ -15,6 +15,8 @@ ru:
         name: 'Название'
         description: 'Описание'
         rule: 'Условие выдачи'
+        value: 'Значение для правила'
+        avatar: 'Награда'
       contact:
         name: 'Имя'
         email: 'Email'
@@ -133,6 +135,8 @@ ru:
           description: 'Описание награды'
           actions: 'Действия'
           image: 'Награда'
+        new:
+          header: 'Новая награда'
         edit:
           header: 'Редактировать награду'
         create:

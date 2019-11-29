@@ -15,6 +15,8 @@ en:
         name: 'Name'
         description: 'Description'
         rule: 'Condition'
+        value: 'Formula value'
+        avatar: 'Image'
       contact:
         name: 'Name'
         email: 'Email'
@@ -131,6 +133,8 @@ en:
         description: 'Description'
         actions: 'Actions'
         image: 'Badge'
+      new:
+        header: 'New badge'
       edit:
         header: 'Edit Badge'
       create:
