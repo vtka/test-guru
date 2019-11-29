@@ -5,7 +5,7 @@ module BadgeRules
     end
 
     def expected
-      Test.by_category('back-end').all_levels.count
+      Test.by_category('back-end').count
     end
   end
 end
