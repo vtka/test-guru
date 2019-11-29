@@ -5,7 +5,7 @@ module BadgeRules
     end
 
     def expected
-      Test.categories_easy.count
+      Test.easy.count
     end
   end
 end

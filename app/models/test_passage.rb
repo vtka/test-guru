@@ -18,6 +18,8 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
+    mark_as_passed if successful?
+
     save!
   end
 
@@ -35,7 +37,7 @@ class TestPassage < ApplicationRecord
 
   def mark_as_passed
     self.success = true
-    save(validate: false)
+    # save(validate: false)
   end
 
   private
