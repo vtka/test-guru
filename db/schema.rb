@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2019_11_29_094844) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["badge_id"], name: "index_earned_badges_on_badge_id"
-    t.index ["user_id", "badge_id"], name: "index_earned_badges_on_user_id_and_badge_id", unique: true
+    t.index ["user_id", "badge_id"], name: "index_earned_badges_on_user_id_and_badge_id"
     t.index ["user_id"], name: "index_earned_badges_on_user_id"
   end
 

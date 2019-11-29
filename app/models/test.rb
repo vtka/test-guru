@@ -21,6 +21,8 @@ class Test < ApplicationRecord
         .where(categories: { title: title })
         .order(title: :desc) }
 
+  scope :in_category, ->(cat_id) { where(category_id: cat_id) }
+
   def self.select_title(title)
     by_category(title).pluck(:title)
   end
