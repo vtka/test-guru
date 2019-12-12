@@ -1,20 +1,9 @@
 module BadgeRules
   class BaseRule
-    def initialize(user, value)
+    def initialize(user, test_passage, badge)
       @user = user
-      @value = value
-    end
-
-    def call
-      actual >= expected
-    end
-
-    def actual
-      raise NotImplementedError
-    end
-
-    def expected
-      raise NotImplementedError
+      @test_passage = test_passage
+      @badge = badge
     end
   end
 end

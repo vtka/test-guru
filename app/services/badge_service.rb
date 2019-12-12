@@ -1,18 +1,16 @@
 class BadgeService
   def initialize(test_passage)
     @test_passage = test_passage
-    @badges = []
     @user = test_passage.user
   end
 
   def call
-    Badge.all.each do |badge|
-      badge_rule = "BadgeRules::#{badge.rule}".constantize.new(@user, badge.value)
+    Badge.all.map do |badge|
+      badge_rule = "BadgeRules::#{badge.rule}".constantize.new(@user, @test_passage, badge)
 
       if badge_rule.call
-        @badges << EarnedBadge.new(user_id: @user.id, badge_id: badge.id)
+        EarnedBadge.new(user_id: @user.id, badge_id: badge.id)
       end
-    end
-    @badges
+    end.compact
   end
 end
