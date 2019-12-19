@@ -133,6 +133,11 @@ en:
         description: 'Description'
         actions: 'Actions'
         image: 'Badge'
+      form:
+        rule:
+          all_tests_from_category: "Complete all tests from category"
+          first_try: "First try success on test"
+          all_tests_on_level: "Complete all tests on level"
       new:
         header: 'New badge'
       edit:
