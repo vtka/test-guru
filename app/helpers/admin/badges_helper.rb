@@ -4,6 +4,6 @@ module Admin::BadgesHelper
   end
 
   def rule_type_options
-    Badge::RULE_TYPES.map { |type| [t("badges.form.rule.#{type}"), type] }
+    BadgeService::RULE_TYPES.map { |type| [t("badges.form.rule.#{type}"), type] }
   end
 end

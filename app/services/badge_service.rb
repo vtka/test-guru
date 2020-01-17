@@ -1,12 +1,13 @@
 class BadgeService
+  RULE_TYPES = %w[all_tests_from_category first_try all_tests_on_level].freeze
+
   def initialize(test_passage)
     @test = test_passage.test
     @user = test_passage.user
   end
 
   def call
-    unlocked_badges = select_badges
-    assign_badges(unlocked_badges)
+    @user.badges << select_badges
   end
 
   private
@@ -17,18 +18,11 @@ class BadgeService
     end
   end
 
-  def assign_badges(badges)
-    badges_to_assign = badges - @user.badges
-    return unless badges_to_assign.count.positive?
-
-    @user.badges << badges_to_assign
-    badges_to_assign.count
-  end
-
   def all_tests_from_category(category_name)
     return false if @test.category.title != category_name
 
     successful_tests_count = successful_tests_in_category.uniq.count
+
     return false unless successful_tests_count.positive?
 
     Test.by_category(@test.category.title).uniq.count == successful_tests_count
@@ -50,11 +44,28 @@ class BadgeService
   end
 
   def successful_tests_in_category
-    successful_tests.where(category_id: @test.category.id)
+    badge = @user.badges.where(rule: "all_tests_from_category").last
+
+    scope = successful_tests.where(category_id: @test.category.id)
+    
+    badged_tests(badge, scope)
   end
 
   def successful_tests_on_level
-    successful_tests.where(level: @test.level)
+    badge = @user.badges.where(rule: "all_tests_on_level").last
+
+    scope = successful_tests.where(level: @test.level)
+    
+    badged_tests(badge, scope)
+  end
+
+  def badged_tests(badge, scope)
+    if badge
+      earned_badge = EarnedBadge.where(user_id: @user.id, badge_id: badge.id).last
+      scope.where("test_passages.created_at > ?", earned_badge.created_at)
+    else
+      scope
+    end
   end
 
   def successful_tests
