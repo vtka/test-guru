@@ -1,5 +1,15 @@
 <div class="container">
   <h5 class="mt-4"><%= t('.header', title: @test_passage.test.title) %></h5>
+
+  <% if @test_passage.test.time_limited? %>
+    <div class="text-center">
+      <%= t('.time_left') + ': ' %>
+      <%= content_tag :span,
+                      format_seconds(@test_passage.time_left),
+                      class: 'time-counter',
+                      data: { time_left: @test_passage.time_left} %>
+    </div>
+  <% end %>
   
   <%= content_tag :div, 
                   t('.question', number: @test_passage.current_question_number, size: @test_passage.test.questions.size), 
@@ -12,7 +22,7 @@
   </p>
 </div>
 
-<%= form_with(url: test_passage_path(@test_passage),  html: { class: 'form-check' }, local: true, method: :put) do |form| %>
+<%= form_with(url: test_passage_path(@test_passage),  html: { class: 'form-check test-passage-form' }, local: true, method: :put) do |form| %>
     <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
       <div class="form-check mt-1">
         <%= b.check_box class: 'form-check-input', id: "answer_ids_#{b.object.id}" %>

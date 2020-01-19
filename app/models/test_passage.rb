@@ -7,6 +7,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :set_next_question, on: %i[create update]
 
+  before_update :before_update_check_time_limit
+
   scope :in_category, ->(cat_id) { includes(:test).where(tests: { category_id: cat_id }) }
   scope :success, -> { where(success: true) }
   scope :with_level, ->(level) { includes(:test).where(tests: { level: level }) }
@@ -37,15 +39,16 @@ class TestPassage < ApplicationRecord
 
   def mark_as_passed
     self.success = true
-    # save(validate: false)
+  end
+
+  def time_left
+    (created_at.to_i + test.time_limit) - Time.current.to_i
   end
 
   private
 
   def correct_answer?(answer_ids)
-    correct_answers_count = correct_answers.count
-
-    (correct_answers_count == correct_answers.where(id: answer_ids).count) && correct_answers_count == answer_ids.count
+    correct_answers.ids.sort == Array(answer_ids).map(&:to_i).sort
   end
 
   def set_next_question
@@ -62,5 +65,11 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def before_update_check_time_limit
+    return unless test.time_limited?
+
+    self.current_question = nil if time_left <= 0
   end
 end
