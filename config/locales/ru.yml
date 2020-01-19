@@ -11,6 +11,7 @@ ru:
         title: 'Название'
         level: 'Уровень'
         category_id: 'Категория'
+        time_limit: 'Лимит времени'
       badge:
         name: 'Название'
         description: 'Описание'
@@ -55,8 +56,9 @@ ru:
       header: "Доступные Тесты"
       title: 'Название'
       level: 'Уровень'
-      questions: 'Вопросы'
+      questions: 'Вопросы' 
       actions: 'Действия'
+      time_limit: 'Лимит времени'
 
   earned_badges:
     index:
@@ -170,6 +172,7 @@ ru:
     show:
       header: 'Прохождение %{title} теста'
       question: 'Вопрос %{number} из %{size}'
+      time_left: 'Осталось времени'
     gist:
       success: 'Gist успешно сохранен! Ваш Gist <a href="%{gist}" target="_blank">здесь</a>'
       failure: 'Во время сохранения Gist произошла ошибка!'

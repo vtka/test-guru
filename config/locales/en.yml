@@ -11,6 +11,7 @@ en:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+        time_limit: 'Time Limit'
       badge:
         name: 'Name'
         description: 'Description'
@@ -55,6 +56,7 @@ en:
       level: 'Level'
       questions: 'Questions'
       actions: 'Actions'
+      time_limit: 'Time Limit'
   
   earned_badges:
     index:
@@ -173,6 +175,7 @@ en:
     show:
       header: 'Passing %{title} test'
       question: 'Question %{number} of %{size}'
+      time_left: 'Time left'
     gist:
       success: 'Gist was successfully created! Open your <a href="%{gist}" target="_blank">Gist</a>'
       failure: 'An error occured while saving Gist!'

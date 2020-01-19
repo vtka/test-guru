@@ -5,7 +5,7 @@
   <%= link_to t('actions.back'), admin_tests_path, class: 'btn btn-primary' %><br>
 
   <% if @test.time_limit > 0 %>
-    <h6 class="mb-4"><%= t('.time_limit') %>: <%= format_seconds(@test.time_limit) %></h3>
+    <h6 class="mb-4"><%= t('.time_limit') %>: <%= format_seconds(@test.time_limit) %></h6>
   <% end %>
 
   <table class="table table-hover col-md-6 mt-3">
